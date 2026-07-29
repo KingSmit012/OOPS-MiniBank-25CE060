@@ -10,7 +10,7 @@ enum MenuOption{
     EXIT
 }
 
-public class miniBank {
+public class MiniBank{
     public static void main(String[] args) {
         Scanner sc= new Scanner(System.in);
 
