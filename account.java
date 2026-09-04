@@ -1,4 +1,4 @@
-public class account {
+abstract public class account {
 
     private final String accountNumber;
     private String ownerName;
@@ -39,6 +39,9 @@ public class account {
         }
             
     }
+
+    abstract public double interestRate();
+    abstract public boolean canWithdraw(long amount);
 
     String getOwnerName(){
         return this.ownerName;
