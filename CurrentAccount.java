@@ -1,4 +1,4 @@
-public class CurrentAccount extends account{
+public class CurrentAccount extends Account{
     private long overdraftLimit;
 
     public CurrentAccount(String ownerName , long initialBalance , long overdraftLimit){

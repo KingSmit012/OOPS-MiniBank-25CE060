@@ -1,11 +1,11 @@
-public class customer implements Cloneable {
+public class Customer implements Cloneable {
     private String name;
     private String email;
     private String mobileNumber;
 
-    private final String customerId;
+    private final String CustomerId;
 
-    private static long customerCounter = 100;
+    private static long CustomerCounter = 100;
 
     private Address address;
 
@@ -14,13 +14,13 @@ public class customer implements Cloneable {
         return "CUST" + n;
     }
 
-    public customer(String name, String email, String mobileNumber) {
+    public Customer(String name, String email, String mobileNumber) {
         this.name = name;
         this.email = email;
         this.mobileNumber = mobileNumber;
 
-        customerCounter++;
-        customerId = generateCustomerId(customerCounter);
+        CustomerCounter++;
+        CustomerId = generateCustomerId(CustomerCounter);
     }
 
     String getName() {
@@ -36,7 +36,7 @@ public class customer implements Cloneable {
     }
 
     String getCustomerID() {
-        return customerId;
+        return CustomerId;
     }
 
     // Added for Practical 3
@@ -81,9 +81,9 @@ public class customer implements Cloneable {
 
     // Added for Practical 3
     @Override
-    public customer clone() {
+    public Customer clone() {
         try {
-            return (customer) super.clone();
+            return (Customer) super.clone();
         } 
         catch(CloneNotSupportedException e) {
             throw new RuntimeException(e);

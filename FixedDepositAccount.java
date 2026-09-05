@@ -1,4 +1,4 @@
-public class FixedDepositAccount extends account{
+public class FixedDepositAccount extends Account{
 
     public FixedDepositAccount(String ownerName , long initialBalance){
         super(ownerName, initialBalance);

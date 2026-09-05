@@ -1,4 +1,4 @@
-public class SavingsAccount extends account{
+public class SavingsAccount extends Account{
     
     private long minBalance;
 

@@ -1,4 +1,4 @@
-abstract public class account {
+abstract public class Account {
 
     private final String accountNumber;
     private String ownerName;
@@ -7,14 +7,14 @@ abstract public class account {
 
     private static int accountCounter = 1;
 
-    public account(String ownerName , long initialBalance){
+    public Account(String ownerName , long initialBalance){
         this.accountNumber = String.format("AC%04d",(accountCounter++));
         this.ownerName = ownerName;
         this.balance = initialBalance;
         this.isActive = true;
     }
 
-    public account(String ownerName){
+    public Account(String ownerName){
         this(ownerName ,0);
     }
 
@@ -63,11 +63,11 @@ abstract public class account {
             return true;
         }
 
-        if(!(o instanceof account)){
+        if(!(o instanceof Account)){
             return false;
         }
 
-        account other = (account) o;
+        Account other = (Account) o;
 
         return accountNumber.equals(other.accountNumber);
     }
