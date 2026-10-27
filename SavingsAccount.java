@@ -12,12 +12,10 @@ public class SavingsAccount extends Account{
         return 4.0;
     }
 
+
     @Override
-    public boolean canWithdraw(long amount){
-        
-        if(amount > minBalance){
-            return true;
-        }
-        return false;
+    public boolean canWithdraw(long amount) {
+        return getBalance() - amount >= minBalance;
     }
+
 }
